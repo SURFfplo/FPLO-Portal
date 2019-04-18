@@ -1,0 +1,133 @@
+/* CSS - Mijn Fontys Leeromgeving - Tiles */
+
+/* Fontys - Colors */
+.fplo-purple {
+
+	background-color: #6c757d;
+}
+
+.fplo-magenta {
+	background-color: #e5007d;
+}
+
+.fplo-blue {
+	background-color: #0076e0;
+}
+
+.fplo-grey {
+	background-color: #8b8b8b;
+}
+
+/* SQUARE TILE */
+
+.fplo-tile {
+  width: 100px;
+  height: 100px;
+  color: white;
+  display: block;
+  float: left;
+  border-radius: 4px;
+  margin-left: 0px;
+  margin-right:4px;
+  margin-top: 0px;
+  margin-bottom:3px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.fplo-tile:hover {
+  outline: #c7c7c7 solid 0px !important;
+  color: white !important;
+  background: #c7c7c7 !important;
+}
+
+.fplo-tile .icon {
+  position: absolute;
+  color: white;
+  width: 65px;
+  height: 65px;
+  font-size: 38px;
+  top: 50%;
+  margin-top: -29px;
+  left: 50%;
+  margin-left: -32px;
+  text-align: center;
+}
+
+.fplo-tile .tile-label {
+  position: absolute;
+  color: white;
+  bottom: 0;
+  left: 2px;
+  padding: 3px;
+  z-index: 999;
+  font-size: 11px;
+}
+
+/* RECTANGLE TILE */
+
+.fplo-tile-list {
+  width: 288px;
+  height: 47px;
+  color: white;
+  display: block;
+  float: left;
+  border-radius: 4px;
+  margin-left: 0px;
+  margin-right:3px;
+  margin-top: 0px;
+  margin-bottom:3px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.fplo-tile-list:hover {
+  outline: #c7c7c7 solid 0px !important;
+  background: #c7c7c7 !important;
+  color: white !important;
+}
+
+
+
+.fplo-tile-list .icon {
+  position: absolute;
+  color: white;
+  width: 47px;
+  height: 32px;
+  font-size: 32px;
+  top: 0px;
+  margin-top: 0px;
+  left: 0px;
+  margin-left: 0px;
+  padding-top: 6px;
+  text-align: center;
+}
+
+.fplo-tile-list .tile-list-label {
+  position: absolute;
+  width: 210;
+  margin-top: 6px;
+  margin-left: 50px;
+  color: white;
+  Z-index: 999;
+  font-size: 12px;
+}
+.fplo-tile-list .tile-list-desc {
+  position: absolute;
+  width: 210;
+  margin-top: 24px;
+  margin-left: 50px;
+  color: white;
+  Z-index: 999;
+  font-size: 10px;
+}

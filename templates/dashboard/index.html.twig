@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block stylesheets %}
+	
+		
+	
+	<style>
+	.col-md-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+        background-color: #664466;
+    }
+	</style>
+
+	        
+{% endblock %}
+
+
+{% block body %}
+
+<!-- Square Tile -->
+<div class="fplo-tile fplo-purple card-draggable">
+	<a class="fplo-tile" href="#" title="Tooltip" target="_blank"> 
+	    <i class="icon mdi mdi-view-dashboard"></i>
+		<span class="tile-label">Leermaterialen (Canvas)</span>
+	</a>
+</div>
+
+</div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+
+	{{ parent() }}
+	
+	<script>
+        $(function () {
+            // sortable
+            $(".sortable").sortable({
+                connectWith: '.sortable',
+                items: '.card-draggable',
+                revert: true,
+                placeholder: 'card-draggable-placeholder',
+                forcePlaceholderSize: true,
+                opacity: 0.77,
+                cursor: 'move'
+            });
+        });
+    </script>
+    
+{% endblock %}
