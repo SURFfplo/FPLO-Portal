@@ -93,13 +93,8 @@
                                 <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
 
                                     <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="ti-user m-r-5"></i> Profile
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="ti-power-off m-r-5"></i> Logout
+                                    <a href="{{ path('profile') }}" class="dropdown-item notify-item">
+                                        <i class="ti-user m-r-5"></i> Profiel
                                     </a>
 
                                 </div>
@@ -132,16 +127,14 @@
 
         <div class="wrapper">
             <div class="container-fluid">
+				<br>
 
-                <br>
-                <br>
-                
                 <!-- end page title end breadcrumb -->
-                <div class="row">
+
 					
 					{% block body %}Title Placeholder{% endblock %}
 
-                </div>
+
                 <!-- end row -->
 
             </div> <!-- end container -->

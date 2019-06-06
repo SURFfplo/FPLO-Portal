@@ -14,8 +14,9 @@ class DashboardController extends AbstractController
     public function index()
     {
 	    $portalUrl = "$_SERVER[HTTP_HOST]";
+	    $portalUrl = substr($portalUrl, 7);
 	    
-        return $this->render('dashboard/index.html.twig', [
+        return $this->render('dashboard/dashboard.html.twig', [
             'portalUrl' => $portalUrl
         ]);
     }
