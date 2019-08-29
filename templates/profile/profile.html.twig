@@ -21,27 +21,19 @@
 
 {% block body %}
 
-
-
-
     <div class="text-center card-box">
         <div>
             <img src="{{ asset('assets/images/avatar.jpeg') }}" class="rounded-circle thumb-xl img-thumbnail m-b-10" alt="profile-image">
 
             <div class="text-left">
-                <p class="text-muted font-13"><strong>Voornaam:</strong> <span class="m-l-15">Johnathan Deo</span></p>
+                <p class="text-muted font-13"><strong>Voornaam:</strong> <span class="m-l-15">{{ data.givenName }}</span></p>
 
-                <p class="text-muted font-13"><strong>Achternaam:</strong><span class="m-l-15">(123) 123 1234</span></p>
+                <p class="text-muted font-13"><strong>Achternaam:</strong><span class="m-l-15">{{ data.surname }}</span></p>
 
-                <p class="text-muted font-13"><strong>Email:</strong> <span class="m-l-15">coderthemes@gmail.com</span></p>
+                <p class="text-muted font-13"><strong>Email:</strong> <span class="m-l-15">{{ data.mail }}</span></p>
             </div> 
         </div>
-    </div>
-
-
-
-
-             
+    </div>       
 
 {% endblock %}
 
