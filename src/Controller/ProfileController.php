@@ -19,7 +19,7 @@ class ProfileController extends AbstractController
 		
 		//Call OOAPI for profile info:	    
 	    $client = HttpClient::create();
-		$response = $client->request('GET', getenv('OOAPI').'/persons/'.$uid);		
+		$response = $client->request('GET', getenv('API_URL').'/persons/'.$uid);		
 		$content = $response->toArray();
 
         return $this->render('profile/profile.html.twig', [
