@@ -20,7 +20,8 @@ class DashboardController extends AbstractController
 	//Call JWT service for LTI 1.3 tools
 	$client = HttpClient::create();
 	$response = $client->request('GET', getenv('JWT_URL').'/context');		
-	$content = $response->toArray();
+	$content = json_decode($response);
+	//$content = $response->toArray();
 
         return $this->render('dashboard/dashboard.html.twig', [
             'portalUrl' => $portalUrl,
