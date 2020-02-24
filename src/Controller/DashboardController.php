@@ -8,16 +8,22 @@ use Symfony\Component\Routing\Annotation\Route;
 class DashboardController extends AbstractController
 {
     /**
-	 * @Route("/", name="homepage")
-     * @Route("/dashboard", name="dashboard")
+	* @Route("/", name="homepage")
+     	* @Route("/dashboard", name="dashboard")
      */
     public function index()
     {
-	    $portalUrl = "$_SERVER[HTTP_HOST]";
-	    $portalUrl = substr($portalUrl, 8);
-	    
+	$portalUrl = "$_SERVER[HTTP_HOST]";
+	$portalUrl = substr($portalUrl, 8);
+
+	//Call JWT service for LTI 1.3 tools
+	$client = HttpClient::create();
+	$response = $client->request('GET', getenv('JWT_URL').'/context');		
+	$content = $response->toArray();
+
         return $this->render('dashboard/dashboard.html.twig', [
-            'portalUrl' => $portalUrl
+            'portalUrl' => $portalUrl,
+            'context' => $content
         ]);
     }
 }
