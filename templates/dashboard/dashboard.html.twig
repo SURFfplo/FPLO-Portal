@@ -47,16 +47,15 @@
             </a>
         </div>
     </div>
-</div>
           
     <div class="col-2">  
-          <!-- LTI-->
+         <!-- LTI-->
         <div class="card m-b-10">
-        	<a href="https://lms.{{portalUrl}}/courses/7">
-            	<img class="card-img-top img-fluid" src="{{ asset('assets/images/instruction.png') }}" alt="Learning">
+        	<a href="{{ context[0].url }}">
+            	<img class="card-img-top img-fluid" src="{{ context[0].icon_url }}" alt=" {{ context[0].description }} ">
             
             <div class="card-body">
-                <h4 class="card-title">{{ dump(context) }}</h4>
+                <h4 class="card-title">{{ context[0].name }}</h4>
             </div>
             </a>
         </div>
