@@ -23,7 +23,7 @@ class DashboardController extends AbstractController
 		$response = $client->request('GET', getenv('JWT_URL').'/context');		
 		$content = json_decode($response->getContent());
 	}
-	catch (Exception $e){
+	catch (TransportExceptionInterface $e) {
 		$content = [];
 	}
 
